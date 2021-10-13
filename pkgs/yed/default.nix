@@ -31,6 +31,6 @@ pkgs.stdenv.mkDerivation rec {
         homepage = "https://your-editor.org/";
         license = with licenses; [ mit ];
         platforms = platforms.all;
-        maintainers = with maintainers; [ uniquepointer ];
+        maintainers = [ "uniquepointer" ];
     };
 }
