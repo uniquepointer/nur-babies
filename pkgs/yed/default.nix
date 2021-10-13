@@ -29,7 +29,7 @@ pkgs.stdenv.mkDerivation rec {
         description = "yed is a small and simple terminal editor core that is meant to be extended through a powerful plugin architecture.";
         homepage = "https://your-editor.org/";
         license = with licenses; [ mit ];
-        platforms = with platforms; [ linux ];
+        platforms = platforms.all;
         maintainers = with maintainers; [ uniquepointer ];
     };
 }
