@@ -1,6 +1,6 @@
-{pythonPackages, fetchFromGitHub, buildPythonApplication, i3ipc}:
+{ python3Packages, fetchFromGitHub, i3ipc-glib, python39Packages, lib }:
 
-buildPythonApplication rec {
+python3Packages.buildPythonPackage rec {
   pname = "swallow";
   version = "1.1.1";
 
@@ -13,7 +13,8 @@ buildPythonApplication rec {
   };
 
    propagatedBuildInputs = [
-    i3ipc
+    i3ipc-glib
+    python39Packages.i3ipc
   ];
    configurePhase = ''
     echo 'nothing to configure'
@@ -29,4 +30,11 @@ buildPythonApplication rec {
     mkdir -p $out/bin
     mv swallow $out/bin
   '';
+  meta = with lib; {
+    description = "Used to swallow a terminal window in i3";
+    homepage = "https://github.com/jamesofarrell/i3-swallow";
+    license = with licenses; [ mit ];
+    platforms = with platforms; [ linux ];
+    maintainers = [ "uniquepointer" ];
+    };
 }
