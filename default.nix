@@ -15,4 +15,5 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   yed = pkgs.callPackage ./pkgs/yed { };
+  i3-swallow = pkgs.callPackage ./pkgs/i3-swallow { };
 }
