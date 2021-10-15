@@ -6,20 +6,20 @@ python3Packages.buildPythonPackage rec {
 
   rev = "7a9faed693b0da7df762a095fed512eca8c6414c";
   src = fetchFromGitHub {
-    owner  = "jamesofarrell";
-    repo   = "i3-swallow";
-    rev    = "7a9faed";
+    owner = "jamesofarrell";
+    repo = "i3-swallow";
+    rev = "7a9faed";
     sha256 = "bUWmH606sGsP+j45nZg60j+eKI1zhcSQ+v7VqONmCbs=";
   };
 
-   propagatedBuildInputs = [
+  propagatedBuildInputs = [
     i3ipc-glib
     python39Packages.i3ipc
   ];
-   configurePhase = ''
+  configurePhase = ''
     echo 'nothing to configure'
   '';
-   setuptoolsCheckPhase = "echo 'nothing to check'";
+  setuptoolsCheckPhase = "echo 'nothing to check'";
 
   buildPhase = ''
     mv swallow.py swallow
@@ -36,5 +36,5 @@ python3Packages.buildPythonPackage rec {
     license = with licenses; [ mit ];
     platforms = [ "x86_64-linux" ];
     maintainers = [ "uniquepointer" ];
-    };
+  };
 }
