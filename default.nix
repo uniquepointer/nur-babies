@@ -16,4 +16,5 @@
 
   yed = pkgs.callPackage ./pkgs/yed { };
   i3-swallow = pkgs.callPackage ./pkgs/i3-swallow { };
+  zig-master = pkgs.callPackage ./pkgs/zig-master { };
 }
