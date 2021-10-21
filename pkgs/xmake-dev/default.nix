@@ -33,6 +33,7 @@ pkgs.stdenv.mkDerivation rec {
     homepage = "https://xmake.io/";
     license = with licenses; [ asl20 ];
     platforms = platforms.all;
+    broken = true;
     maintainers = [ "uniquepointer" ];
   };
 }
