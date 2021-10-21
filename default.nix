@@ -17,4 +17,8 @@
   yed = pkgs.callPackage ./pkgs/yed { };
   i3-swallow = pkgs.callPackage ./pkgs/i3-swallow { };
   zig-master = pkgs.callPackage ./pkgs/zig-master { };
+  nyxt-dev = pkgs.callPackage ./pkgs/nyxt-dev { };
+  runescape-launcher = pkgs.callPackage ./pkgs/runescape-launcher/wrapper.nix { };
+  runescape-launcher-unwrapped = pkgs.callPackage ./pkgs/runescape-launcher { };
+  xmake-dev = pkgs.callPackage ./pkgs/xmake-dev { };
 }
