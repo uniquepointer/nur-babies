@@ -53,10 +53,9 @@ pkgs.stdenv.mkDerivation rec {
   nativeBuildInputs = [
     #shoutouts pierre
     pkgs.libfixposix
-    #     pkgs.sbcl
+    pkgs.sbcl
     pkgs.openssl
     pkgs.webkitgtk
-    pkgs.lispPackages.clwrapper
     makeWrapper
     wrapGAppsHook
   ];
@@ -72,7 +71,7 @@ pkgs.stdenv.mkDerivation rec {
 
     pkgs.gobjectIntrospection
     pkgs.git
-    #     pkgs.sbcl
+    pkgs.sbcl
     pkgs.enchant
     pkgs.gsettings-desktop-schemas
     pkgs.glib-networking
@@ -120,15 +119,16 @@ pkgs.stdenv.mkDerivation rec {
   #   '';
 
   buildPhase = ''
-        echo "*** Starting build...";
-    #     make LISP=common-lisp.sh NYXT_INTERNAL_QUICKLISP=false PREFIX="$out" $makeFlags all
-    #     make LISP=common-lisp.sh NYXT_INTERNAL_QUICKLISP=false PREFIX="$out" $makeFlags install
-        make LISP=common-lisp.sh DESTDIR=./ NYXT_INTERNAL_QUICKLISP=false all
-        make LISP=common-lisp.sh DESTDIR=./ NYXT_INTERNAL_QUICKLISP=false install
+    export PATH=$PATH:$out/bin
+    export HOME=$TMPDIR
+    echo "*** Starting build...";
+    make all
   '';
   installPhase = ''
-    mkdir -p $out/bin/
-    cp nyxt "$out/bin/nyxt"
+    install -Dm755 ./nyxt "$out/bin/nyxt-dev"
+    wrapProgram $out/bin/nyxt-dev \
+        --prefix LD_LIBRARY_PATH : "${LD_LIBRARY_PATH}"\
+        --prefix GST_PLUGIN_SYSTEM_PATH_1_0 : "${GST_PLUGIN_SYSTEM_PATH_1_0}"
   '';
 
   #   dontWrapGApps = true;
