@@ -9,7 +9,8 @@ pkgs.stdenv.mkDerivation rec {
     owner = "xmake-io";
     repo = "xmake";
     rev = "72f482c";
-    sha256 = "sha256-rSUKPE19vgoMhgG6fwrInjU8uxYqlU6kepmH8mDsFh8=";
+    sha256 = "sha256-JePIoVeaIxJ1HDtobu4I7UIkAM9hqaFK7OaUZ5B6KYs=";
+    fetchSubmodules = true;
   };
 
   buildInputs = [
@@ -25,7 +26,8 @@ pkgs.stdenv.mkDerivation rec {
 
   installPhase = ''
     mkdir -p $out/bin
-    cp bin/xmake $out/bin/.
+    mkdir -p $out/share
+    make install PREFIX=$out
   '';
 
   meta = with lib; {
@@ -33,7 +35,6 @@ pkgs.stdenv.mkDerivation rec {
     homepage = "https://xmake.io/";
     license = with licenses; [ asl20 ];
     platforms = platforms.all;
-    broken = true;
     maintainers = [ "uniquepointer" ];
   };
 }
