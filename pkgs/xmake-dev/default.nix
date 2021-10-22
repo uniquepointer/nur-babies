@@ -28,6 +28,9 @@ pkgs.stdenv.mkDerivation rec {
     mkdir -p $out/bin
     mkdir -p $out/share
     make install PREFIX=$out
+    #so we get proper permissions
+    find $out/share -type f -print0 | xargs -0 chmod 646
+    chmod 644 $out/share/xmake/core/main.lua
   '';
 
   meta = with lib; {
@@ -35,6 +38,7 @@ pkgs.stdenv.mkDerivation rec {
     homepage = "https://xmake.io/";
     license = with licenses; [ asl20 ];
     platforms = platforms.all;
+    broken = true;
     maintainers = [ "uniquepointer" ];
   };
 }
