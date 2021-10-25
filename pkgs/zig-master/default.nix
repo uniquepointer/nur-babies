@@ -23,7 +23,7 @@ stdenv.mkDerivation rec {
     description =
       "General-purpose programming language and toolchain for maintaining robust, optimal, and reusable software.";
     homepage = "https://github.com/ziglang/zig";
-    maintainers = [ "uniquepointer" ];
+    maintainers = with maintainers; [ uniquepointer ];
     platforms = platforms.linux;
   };
 }
