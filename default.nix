@@ -14,7 +14,7 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  yed = pkgs.callPackage ./pkgs/yed { };
+  your-editor = pkgs.callPackage ./pkgs/yed { };
   i3-swallow = pkgs.callPackage ./pkgs/i3-swallow { };
   zig-master = pkgs.callPackage ./pkgs/zig-master { };
   nyxt-dev = pkgs.callPackage ./pkgs/nyxt-dev { };
