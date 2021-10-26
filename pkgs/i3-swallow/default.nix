@@ -35,7 +35,6 @@ python3Packages.buildPythonPackage rec {
     homepage = "https://github.com/jamesofarrell/i3-swallow";
     license = with licenses; [ mit ];
     platforms = [ "x86_64-linux" ];
-    maintainers = [ "uniquepointer" ];
     maintainers = with maintainers; [ uniquepointer ];
   };
 }
