@@ -36,5 +36,6 @@ python3Packages.buildPythonPackage rec {
     license = with licenses; [ mit ];
     platforms = [ "x86_64-linux" ];
     maintainers = with maintainers; [ uniquepointer ];
+    mainProgram = "swallow";
   };
 }
