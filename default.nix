@@ -21,5 +21,4 @@
   runescape-launcher = pkgs.callPackage ./pkgs/runescape-launcher/wrapper.nix { };
   runescape-launcher-unwrapped = pkgs.callPackage ./pkgs/runescape-launcher { };
   xmake-dev = pkgs.callPackage ./pkgs/xmake-dev { };
-  beeref = pkgs.callPackage ./pkgs/beeref { };
 }
