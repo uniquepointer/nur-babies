@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation rec {
   pname = "zig-master";
-  version = "0.9.0-dev.1396+51be57574";
+  version = "0.9.0-dev.1444+e2a2e6c14";
 
   src = fetchurl {
     url =
       "https://ziglang.org/builds/zig-linux-x86_64-${version}.tar.xz";
     sha256 =
-      "sha256-Db+ue9qZJ2Mfv/skl7kNkf9LPTM3bYVQbSV7MKbJb20=";
+      "sha256-c9a901c2df0661eede242a0860cddc30bbdb34d33f329ddae3e5cbdaed27306c";
   };
 
   installPhase = ''
