@@ -7,8 +7,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "kammerdienerb";
     repo = "yed";
-    rev = "608418f2037dc4ef5647e69fcef45302c50f138c";
-    sha256 = "KqK2lcDTn91aCFJIDg+h+QsTrl7745So5aiKCxPkeh4=";
+    rev = "a5ef45a23dbd88600abe3f52e1cb50fc082f04f2";
+    sha256 = lib.fakeSha;
   };
 
   installPhase = ''
@@ -27,4 +27,3 @@ stdenv.mkDerivation rec {
     mainProgram = "yed";
   };
 }
-
