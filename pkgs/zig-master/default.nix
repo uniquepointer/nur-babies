@@ -7,8 +7,7 @@ stdenv.mkDerivation rec {
   src = fetchurl {
     url =
       "https://ziglang.org/builds/zig-linux-x86_64-${version}.tar.xz";
-    sha256 =
-      "sha256-c9a901c2df0661eede242a0860cddc30bbdb34d33f329ddae3e5cbdaed27306c";
+    sha256 = "sha256-yakBwt8GYe7eJCoIYM3cMLvbNNM/Mp3a4+XL2u0nMGw=";
   };
 
   installPhase = ''
