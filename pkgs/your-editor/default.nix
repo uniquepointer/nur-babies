@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation rec {
   pname = "your-editor";
-  version = "1203";
+  version = "1204";
 
   src = fetchFromGitHub {
     owner = "kammerdienerb";
