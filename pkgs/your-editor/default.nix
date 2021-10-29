@@ -8,7 +8,7 @@ stdenv.mkDerivation rec {
     owner = "kammerdienerb";
     repo = "yed";
     rev = "a5ef45a23dbd88600abe3f52e1cb50fc082f04f2";
-    sha256 = lib.fakeSha;
+    sha256 = "XhZ0J6a1fhTCilsPsrrPbxNOPxmAWFgRbzMAnq81pBs=";
   };
 
   installPhase = ''
