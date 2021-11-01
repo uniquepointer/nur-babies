@@ -21,4 +21,5 @@
   runescape-launcher = pkgs.callPackage ./pkgs/runescape-launcher/wrapper.nix { };
   runescape-launcher-unwrapped = pkgs.callPackage ./pkgs/runescape-launcher { };
   xmake-dev = pkgs.callPackage ./pkgs/xmake-dev { };
+  riscv64-linux-gnu-toolchain = pkgs.callPackage ./pkgs/riscv64-linux-gnu-toolchain { };
 }
