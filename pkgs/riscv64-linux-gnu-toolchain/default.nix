@@ -9,6 +9,7 @@ stdenv.mkDerivation rec {
     repo = "riscv-gnu-toolchain";
     rev = "b39e36160aa0649ba0dfb9aa314d375900d610fb";
     sha256 = "9ksOz+sutD9x7U9JrnMNObAG6TV2HPxf4kqXVAxPF2M=";
+    fetchSubmodules = true;
   };
 
   buildInputs = [
