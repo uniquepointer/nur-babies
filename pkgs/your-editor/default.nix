@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation rec {
   pname = "your-editor";
-  version = "1205";
+  version = "1206";
 
   src = fetchFromGitHub {
     owner = "kammerdienerb";
     repo = "yed";
-    rev = "b332b7e122ac156fde253be0fbdc16d2b86cb5c3";
-    sha256 = "xSf864BsUoUiii5A1Khv2BwoZX7grBlKCtbAhoqu+jg=";
+    rev = "6cdd99fe1359899b26d8967bd376fd5caa5451eb";
+    sha256 = "0XECSolW/xPXd1v3sv9HbJMWuHGnwCOwmHoPNCUsE+w=";
   };
 
   installPhase = ''
