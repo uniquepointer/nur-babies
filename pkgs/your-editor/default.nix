@@ -5,7 +5,7 @@ stdenv.mkDerivation rec {
   version = "1301";
 
   src = fetchFromGitHub {
-    owner = "kammerdienerb";
+    owner = "your-editor";
     repo = "yed";
     rev = "9a02eda459376563450942a8fc00b898471ce75a";
     sha256 = "e7d1ltLvU99zamleCWG9UZJ5hIFJoMlkuJSjA0n5GQM=";
