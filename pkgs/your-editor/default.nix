@@ -11,7 +11,7 @@ stdenv.mkDerivation rec {
     sha256 = "BWy/icQs8hVtNeM/mCi6LOah1UG0elU/DgCmfaIPD64=";
   };
 
-  buildInput = [ pkgs.git ];
+  buildInput = [ pkgs.git pkgs.gcc ];
   installPhase = ''
     runHook preInstall
     patchShebangs install.sh
